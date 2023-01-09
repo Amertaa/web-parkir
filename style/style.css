@@ -1,0 +1,66 @@
+body {
+  background: #f5efef;
+}
+
+.box-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.box {
+  /* width: 50%; */
+  height: 12%;
+  /* display: flex; */
+}
+
+.container-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input {
+  padding: 0.7rem;
+  width: 100%;
+}
+
+.card-input {
+  width: 50%;
+}
+
+/* STRUK */
+
+.luar {
+  height: 480px;
+  width: 300px;
+  border: 3px dashed black;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.idstruk {
+  border: 2px solid black;
+  height: 60px;
+  width: 200px;
+  margin: 50px 50px;
+}
+
+.isi {
+  text-align: center;
+  font-size: 50px;
+}
+
+#tablestruk {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: start;
+}
+
+.footerstruk {
+  margin-top: 50px;
+  font-size: 15px;
+}
