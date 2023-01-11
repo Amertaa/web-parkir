@@ -13,36 +13,36 @@ include "./cek.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Struk</title>
     <link rel="stylesheet" href="../style/style.css">
+
+
 </head>
 
 <body>
     <div class="luar print">
-        STRUK MASUK <br> E-PARKING
+        TIKET PARKIR <br> BIGMALL SAMARINDA
+        <div class="text-jl"> Jl. Jend. Ahmad Yani, Sukmajaya, Samarinda</div>
         <div class="idstruk print">
             <div class="isi print">
-                <?= struk()['id_parkir'] ?>
+                <div class="waktu"><?= struk()['waktu_masuk'] ?></div>
+                <svg id="barcode"></svg>
             </div>
         </div>
-        <table id="tablestruk" class="print">
-            <tr class="print">
-                <td class="print">Nomor Polisi</td>
-                <td class="print">: <?= struk()['nomor_polisi'] ?></td>
-            <tr class="print">
-                <td class="print">Waktu Masuk</td>
-                <td class="print">: <?= struk()['waktu_masuk'] ?></td>
-            </tr>
-            <tr class="print">
-                <td class="print">Nama Petugas</td>
-                <td class="print">: <?= $_SESSION['username'] ?></td>
-            </tr>
-        </table>
-        <div class="footerstruk print">
-            Struk hilang dikenai denda Rp. 50.000 <br> Serahkan Struk Kepada Petugas<br> di Pintu Keluar <br> Terima
-            kasih
+        <div class="footer">
+            <div>Hilang Tanggung Sendiri</div>
+            <div>Terima Kasih</div>
         </div>
-        <button onclick="window.print()"> PRINT </button>
-        <a href="../home.php"> <button> Lanjut </button> </a>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script>
+        JsBarcode("#barcode", "<?= struk()['kode_parkir'] ?>", {
+            width: (3),
+            height: (50)
+        })
+    </script>
+
+
 </body>
 
 </html>

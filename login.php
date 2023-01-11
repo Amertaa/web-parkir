@@ -75,7 +75,7 @@ include './function/config.php';
         </div>
     </section>
 
-
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

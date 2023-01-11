@@ -7,11 +7,8 @@ if (isset($_POST)) {
     ini_set('date.timezone', 'Asia/Singapore');
     $waktu_masuk = date("Y-m-d H:i:s");
     $jenis_id = $_POST["jenis_id"];
+    $kode_parkir = $_POST["kode_parkir"];
     $nomor_polisi = $_POST["nomor_polisi"];
-    $image = $_FILES["Foto"]["name"];
-    $image_size = $_FILES["Foto"]["size"];
-    $image_tmp_name = $_FILES["Foto"]["tmp_name"];
-    $image_folder = '../img/' . $image;
     $keterangan = 'Masuk';
 
     $select = mysqli_query($conn, "SELECT nomor_polisi FROM kendaraan WHERE nomor_polisi = '$nomor_polisi' ") or die("Error: " . mysqli_error($conn));
@@ -24,7 +21,7 @@ if (isset($_POST)) {
                 </script>
             ";
     } else {
-        $query = mysqli_query($conn, "INSERT INTO `kendaraan` VALUES('','$jenis_id','$nomor_polisi','$waktu_masuk','','','$image','$keterangan')") or die("Error: " . mysqli_error($conn));
+        $query = mysqli_query($conn, "INSERT INTO `kendaraan` VALUES('','$jenis_id','$nomor_polisi','$kode_parkir','$waktu_masuk','','','$keterangan')") or die("Error: " . mysqli_error($conn));
 
         if ($query) {
             if ($image_size > 200000) {

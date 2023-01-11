@@ -31,21 +31,31 @@ body {
   width: 50%;
 }
 
+.button {
+  padding: 5rem;
+  font-size: 1rem;
+}
+
 /* STRUK */
 
 .luar {
-  height: 480px;
-  width: 300px;
-  border: 3px dashed black;
+  margin: auto;
+  height: 20rem;
+  width: 25rem;
+  background-color: #ffffff;
   text-align: center;
   padding-top: 10px;
-  font-size: 30px;
+  font-size: 1.4rem;
+}
+
+.text-jl {
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
 }
 
 .idstruk {
-  border: 2px solid black;
   height: 60px;
-  width: 200px;
+  width: 11rem;
   margin: 50px 50px;
 }
 
@@ -54,13 +64,21 @@ body {
   font-size: 50px;
 }
 
+.waktu {
+  font-size: 1.3rem;
+  width: 19rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #tablestruk {
   font-size: 16px;
   font-weight: bold;
   text-align: start;
 }
 
-.footerstruk {
-  margin-top: 50px;
-  font-size: 15px;
+.footer {
+  margin-top: 4rem;
+  font-size: 1.2rem;
 }

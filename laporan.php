@@ -34,7 +34,7 @@ include './function/cek.php';
                             <th>Nomor Polisi</th>
                             <th>Waktu Masuk</th>
                             <th>Waktu Keluar</th>
-                            <th>Harga</th>
+                            <th>Tarif</th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -55,9 +55,20 @@ include './function/cek.php';
                             </tr>
                     </tbody>
                 </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

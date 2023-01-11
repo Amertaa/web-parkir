@@ -24,34 +24,19 @@ include './function/cek.php';
     <h1 class="text-center py-5 fs-1">Input Kendaraan</h1>
     <main class="container-input ">
 
-        <div class="card-input border border-2 rounded">
-            <form action="./function/input.php" method="POST" enctype="multipart/form-data">
-                <div class="input mb-1 ">
-                    <label for="exampleFormControlInput1" class="form-label">Jenis Kendaraan</label>
-                    <select class="form-select" aria-label="Default select example" name="jenis_id" required>
-                        <option selected>Pilih Jenis Kendaraan</option>
-                        <?php foreach (jenis() as $no) : ?>
-                            <option value="<?php echo $no['jenis_id'] ?>" name="jenis_id">
-                                <?php echo $no['kendaraan'] ?>
-                            </option>
-                        <?php endforeach ?>
-                    </select>
+        <form action="" method="POST">
+            <button class="button btn btn-secondary" type="submit">
+                <div class="fs-1 d-flex jus">
+                    <!-- <iconify-icon icon="fa6-solid:motorcycle"></iconify-icon> -->
+                    Roda 2
                 </div>
-                <div class="input mb-1 ">
-                    <label for="exampleFormControlInput1" class="form-label">Nomor Polisi</label>
-                    <input type="text" class="form-control" min="10" max="11" name="nomor_polisi" id="exampleFormControlInput1" placeholder="Masukan Nomor Polisi" required>
-                </div>
-                <div class="input mb-1 ">
-                    <label for="formFileMultiple" class="form-label">Foto</label>
-                    <input class="form-control" type="file" name="Foto" id="formFileMultiple" multiple required>
-                </div>
-                <button type="submit" name="submit" class="btn btn-primary ms-4 mb-4 w-25 fw-bold">Tambah</button>
-        </div>
+            </button>
         </form>
 
     </main>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 </body>
 
 </html>

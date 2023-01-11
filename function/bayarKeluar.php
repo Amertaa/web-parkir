@@ -2,7 +2,6 @@
 
 include "./config.php";
 
-
 $id = $_GET["id"];
 $bayar = $_GET["bayar"];
 $waktu_keluar = $_GET["waktu"];
@@ -17,12 +16,4 @@ $rumus = ceil(((strtotime($waktu_keluar) - strtotime($waktu_masuk['waktu_masuk']
 $harga = $rumus * $bayar;
 $query = "UPDATE kendaraan SET waktu_keluar = '$waktu_keluar', harga='$harga', keterangan= '$keterangan' WHERE id_parkir = $id";
 mysqli_query($conn, $query);
-
-if ($query) {
-    echo
-    "
-    <script>
-    alert('TEST DAHULU!')
-    </script>
-    ";
-}
+include_once('./laporanKeluar.php');
