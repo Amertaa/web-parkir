@@ -7,16 +7,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto me-5">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="../web-parkir/home.php">Kendaraan Masuk </a>
+                    <a class="nav-link active text-white" aria-current="page" href="../web-parkir/roda_2.php">Roda 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="../web-parkir/roda_4.php">Roda 4</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="../web-parkir/kendaraanKeluar.php">Kendaraan Keluar</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="../web-parkir/laporan.php">Laporan</a>
-                </li>
-                <li class="nav-item ms-4">
-                    <a href="function/logout.php" class="btn btn-outline-danger">Log Out</a>
                 </li>
             </ul>
         </div>

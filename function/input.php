@@ -8,10 +8,9 @@ if (isset($_POST)) {
     $waktu_masuk = date("Y-m-d H:i:s");
     $jenis_id = $_POST["jenis_id"];
     $kode_parkir = $_POST["kode_parkir"];
-    $nomor_polisi = $_POST["nomor_polisi"];
     $keterangan = 'Masuk';
 
-    $select = mysqli_query($conn, "SELECT nomor_polisi FROM kendaraan WHERE nomor_polisi = '$nomor_polisi' ") or die("Error: " . mysqli_error($conn));
+    $select = mysqli_query($conn, "SELECT kode_parkir FROM kendaraan WHERE kode_parkir = '$kode_parkir' ") or die("Error: " . mysqli_error($conn));
 
     if (mysqli_num_rows($select) > 0) {
         echo  "
@@ -21,7 +20,7 @@ if (isset($_POST)) {
                 </script>
             ";
     } else {
-        $query = mysqli_query($conn, "INSERT INTO `kendaraan` VALUES('','$jenis_id','$nomor_polisi','$kode_parkir','$waktu_masuk','','','$keterangan')") or die("Error: " . mysqli_error($conn));
+        $query = mysqli_query($conn, "INSERT INTO `kendaraan` VALUES('','$jenis_id','','P$kode_parkir','$waktu_masuk','','','$keterangan')") or die("Error: " . mysqli_error($conn));
 
         if ($query) {
             if ($image_size > 200000) {

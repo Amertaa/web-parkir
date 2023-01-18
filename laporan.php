@@ -1,6 +1,5 @@
 <?php
 include './function/config.php';
-include './function/cek.php';
 
 
 ?>

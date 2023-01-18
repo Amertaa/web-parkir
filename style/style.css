@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
   background: #f5efef;
 }
@@ -81,4 +87,23 @@ body {
 .footer {
   margin-top: 4rem;
   font-size: 1.2rem;
+}
+
+/* Laporan */
+.megalodon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  height: 2.7rem;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin: 1rem 0 0 0.4rem;
 }

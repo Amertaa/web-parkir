@@ -10,10 +10,12 @@ $db = "parking";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db) or die(mysqli_error($conn));
 $users = query("SELECT * FROM `kendaraan` INNER JOIN  jeniskendaraan ON kendaraan.jenis_id = jeniskendaraan.jenis_id 
-    WHERE keterangan = 'Masuk' ORDER BY keterangan ASC") or die(mysqli_error($conn));
+    WHERE keterangan = 'Masuk' ORDER BY id_parkir ASC") or die(mysqli_error($conn));
 $all = mysqli_query($conn, "SELECT * FROM kendaraan") or die(mysqli_error($conn));
 
 // Function
+
+
 
 function jenis()
 {

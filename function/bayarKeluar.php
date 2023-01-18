@@ -6,6 +6,7 @@ $id = $_GET["id"];
 $bayar = $_GET["bayar"];
 $waktu_keluar = $_GET["waktu"];
 
+
 // fungsi keluar
 global $id, $bayar, $kode_bayar, $conn;
 

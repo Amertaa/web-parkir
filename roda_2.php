@@ -1,6 +1,5 @@
 <?php
 include './function/config.php';
-include './function/cek.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +9,7 @@ include './function/cek.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Roda 2</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style/style.css">
 
@@ -24,13 +23,16 @@ include './function/cek.php';
     <h1 class="text-center py-5 fs-1">Input Kendaraan</h1>
     <main class="container-input ">
 
-        <form action="" method="POST">
+        <form action="./cetakStruk.php" method="POST">
             <button class="button btn btn-secondary" type="submit">
-                <div class="fs-1 d-flex jus">
+                <div class="fs-1">
                     <!-- <iconify-icon icon="fa6-solid:motorcycle"></iconify-icon> -->
                     Roda 2
                 </div>
             </button>
+            <input type="hidden" name="kode_parkir" value="<?php echo rand(1000000000000, 5000000000000) ?>">
+            <input type="hidden" name="waktu_masuk">
+            <input type="hidden" name="jenis_id" value="2">
         </form>
 
     </main>

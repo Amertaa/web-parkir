@@ -37,7 +37,7 @@ include "./cek.php";
     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
     <script>
         JsBarcode("#barcode", "<?= struk()['kode_parkir'] ?>", {
-            width: (3),
+            width: (2.8),
             height: (50)
         })
     </script>

@@ -1,6 +1,6 @@
 <?php
 include './function/config.php';
-include './function/cek.php';
+
 
 ?>
 
@@ -11,7 +11,7 @@ include './function/cek.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Kendaraan Keluar</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style/style.css">
 
@@ -26,39 +26,47 @@ include './function/cek.php';
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center mt-5">Kendaraan Keluar</h1>
-                <table class="table table-striped table-hover border border-2 w-100 mt-4">
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Id Parkir</th>
-                            <th>Jenis Kendaraan</th>
-                            <th>Nomor Polisi</th>
-                            <th>Waktu Masuk</th>
-                            <th>Harga</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $i = 1; ?>
-                        <?php foreach ($users as $row) : ?>
-                            <tr>
-                                <td><?= $i ?></td>
-                                <td><?= $row['id_parkir'] ?></td>
-                                <td>Roda <?= $row['jenis_id'] ?></td>
-                                <td><?= $row['nomor_polisi'] ?></td>
-                                <td><?= $row['waktu_masuk'] ?></td>
-                                <td><?= $row['harga'] ?></td>
-                                <td><?= $row['keterangan'] ?></td>
-                                <td>
-                                    <?php ini_set('date.timezone', 'Asia/Singapore'); ?>
-                                    <a href='./function/bayarKeluar.php?id=<?= $row["id_parkir"] ?>&bayar=<?= $row['bayar'] ?>&waktu=<?= date("Y-m-d H:i:s") ?>' class="btn btn-success">Konfirmasi</a>
-                                </td>
-                                <?php $i++ ?>
-                            <?php endforeach ?>
-                            </tr>
-                    </tbody>
-                </table>
+                <div class="megalodon">
+                    <input type="search" class="search mt-3">
+                    <button class="button btn btn-primary p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Parkir Keluar</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Kode Karcis</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="null" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Jenis Kendaraan </label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="null" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Jam Masuk</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="null" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Jam Keluar</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="null" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Plat Nopol</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukan Nomor Plat ">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
