@@ -96,14 +96,26 @@ body {
   align-items: center;
 }
 
-.search {
-  height: 2.7rem;
-  width: 45%;
-  display: flex;
+.form-submit {
+  width: 100vh;
   justify-content: center;
   align-items: center;
 }
 
-.button {
+.search {
+  height: 2.7rem;
+  width: 40%;
+}
+
+#code-submit {
   margin: 1rem 0 0 0.4rem;
+}
+
+.form-keluar {
+  width: 50%;
+  margin: auto;
+}
+
+.button-keluar {
+  margin: 1rem 1rem 1rem 10rem;
 }

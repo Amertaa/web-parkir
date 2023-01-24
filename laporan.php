@@ -18,7 +18,7 @@ include './function/config.php';
 
 <body>
     <?php
-    require_once './function/navbar.php';
+    require_once './view/navbar.php';
     ?>
     <div class="container">
         <div class="row">

@@ -15,6 +15,12 @@ $all = mysqli_query($conn, "SELECT * FROM kendaraan") or die(mysqli_error($conn)
 
 // Function
 
+function cari($keyword)
+{
+    $query = "SELECT * FROM kendaraan WHERE kode_parkir LIKE '%$keyword%'";
+
+    return query($query);
+}
 
 
 function jenis()
@@ -48,3 +54,5 @@ function query($query)
     }
     return $rows;
 }
+
+// ISSET

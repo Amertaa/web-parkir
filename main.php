@@ -17,7 +17,9 @@ include './function/config.php';
 
 <body style="overflow: hidden;">
 
-    <?php require_once './function/navbar.php'; ?>
+    <?php
+    require_once './view/navbar.php';
+    ?>
 
     <div class="container">
         <div class="row">
