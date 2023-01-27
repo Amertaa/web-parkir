@@ -5,7 +5,7 @@ include "./updateNopol.php";
 date_default_timezone_set('Asia/Singapore');
 
 $id    = $_POST["kode_parkir"];
-$query = mysqli_query($conn, "SELECT * FROM kendaraan INNER JOIN jeniskendaraan ON kendaraan.jenis_id = jeniskendaraan.jenis_id");
+$query = mysqli_query($conn, "SELECT * FROM kendaraan INNER JOIN jeniskendaraan ON kendaraan.jenis_id = jeniskendaraan.jenis_id WHERE kode_parkir = '$id'");
 $data  = mysqli_fetch_assoc($query);
 
 $jam_masuk = new DateTime($data['waktu_masuk']);
@@ -60,7 +60,7 @@ $total = ($total_jam + 1) * $data['bayar'];
                         </div>
                         <div class="mb-3 m-3">
                             <label for="exampleFormControlInput1" class="form-label">Plat Nomor</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" name="nomor_polisi" placeholder="Masukan Plat Nomor">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" name="nomor_polisi" placeholder="Masukan Plat Nomor" required>
                         </div>
                         <button type="submit" name="selesai" class="button-keluar btn btn-primary w-50">Keluar</button>
                     </form>

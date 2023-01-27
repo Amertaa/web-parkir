@@ -3,6 +3,10 @@ include './function/config.php';
 
 if (isset($_POST["cari"])) {
     $menu = cari($_POST["kode_parkir"]);
+    if (keluar()) {
+        echo "Data Tidak Bisa Di Akses Lagi!";
+    }
+} else {
 }
 
 
@@ -34,7 +38,7 @@ if (isset($_POST["cari"])) {
                     <form action="./function/laporanKeluar.php" method="POST" class="form-submit d-flex">
                         <input id="code-input" type="search" class="search mt-3" name="kode_parkir" required>
                         <input type="hidden" name="keyword">
-                        <button id="code-submit" class="button btn btn-primary p-2" data-bs-toggle="modal" data-bs-target="#exampleModal" name="cari" value="cari">Cari Kode</button>
+                        <a href=""><button id="code-submit" class="button btn btn-primary p-2" name="cari" value="cari">Cari Kode</button></a>
                     </form>
                 </div>
             </div>

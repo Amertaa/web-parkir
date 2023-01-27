@@ -22,6 +22,13 @@ function cari($keyword)
     return query($query);
 }
 
+function keluar()
+{
+    $query = "SELECT * FROM kendaraan WHERE keterangan = 'keluar'";
+
+    return query($query);
+}
+
 
 function jenis()
 {
